@@ -1,10 +1,9 @@
 {% extends 'restaurante/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
+    {% for menu in menus %}
         <div class="post">
-            <h1><a>{{ post.Nombre }}</a></h1>
-            <p>{{ post.anio|linebreaksbr }} {{ post.consola|linebreaksbr }}</p>
+            <h1><a>{{ menu.nombre }}</a></h1>
         </div>
     {% endfor %}
 {% endblock %}
