@@ -57,12 +57,12 @@ class MenuAdmin(admin.ModelAdmin):
     inlines = (CartaInLine,)
 
 class VentaInLine(admin.TabularInline):
-    model = Carta
+    model = Venta
 
     extra = 1
 
 class ClienteAdmin(admin.ModelAdmin):
-    inlines = (CartaInLine,)
+    inlines = (VentaInLine,)
 
 class EmpleadoAdmin(admin.ModelAdmin):
-    inlines = (CartaInLine,)    
+    inlines = (VentaInLine,)    
