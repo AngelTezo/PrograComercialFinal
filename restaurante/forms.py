@@ -1,18 +1,14 @@
 from django import forms
 from .models import Menu, Plato
 
-class MenuForm(forms.ModelForm):
+class PeliculaForm(forms.ModelForm):
+
     class Meta:
         model = Menu
-        fields = ('nombre','total')
+        fields = ('nombre' )
 
-class PlatoForm(forms.ModelForm):
-    class Meta:
-        model = Plato
-        fields = ('nombre', 'precio')
-
-def __init__(self, *args, **kwargs):
-    super(MenuForm, self).__init__(*args, **kwargs)
-    self.fields["plato"].widget = forms.widgets.CheckboxSelectMultiple()
-    self.fields["plato"].help_text = "Ingrese los platillos de este menu"
-    self.fields["plato"].queryset = Plato.objects.all()
+def __init__ (self, *args, **kwargs):
+        super(PeliculaForm, self).__init__(*args, **kwargs)
+        self.fields["plato"].widget = forms.widgets.CheckboxSelectMultiple()
+        self.fields["plato"].help_text = "Ingrese los Actores que participaron en la película"
+        self.fields["plato"].queryset = Plato.objects.all()

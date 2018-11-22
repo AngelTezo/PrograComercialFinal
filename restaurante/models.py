@@ -1,10 +1,9 @@
 from django.db import models
 from django.contrib import admin
 
-#Aqui guardo el nombre del menu y el total es la suma de los platillos que tiene
+
 class Menu(models.Model):
-    nombre = models.CharField(max_length=30,default='')
-    total = models.IntegerField
+    nombre =  models.CharField(max_length=30)
     
     def __str__(self):
         return self.nombre
